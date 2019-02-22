@@ -6,7 +6,6 @@ import (
 	"github.com/gorilla/mux"
 	"encoding/json"
 	"strconv"
-	"fmt"
 )
 
 var DBClient dbclient.IBoltClient
