@@ -1,6 +1,8 @@
 package service
 
-import "net/http"
+import (
+	"net/http"
+)
 
 type Route struct {
 	Name string
@@ -16,9 +18,6 @@ var routes = Routes{
 		Name:"GetAccount",
 		Method:"GET",
 		Pattern:"/accounts/{accountId}",
-		HandleFunc: func(writer http.ResponseWriter, request *http.Request) {
-			writer.Header().Set("Content-Type", "application/json;charset=UTF-8")
-			writer.Write([]byte(`{"result":"OK"}`))
-		},
+		HandleFunc: GetAccount,
 	},
 }
